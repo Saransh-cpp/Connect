@@ -13,6 +13,8 @@ class CreatePost : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_post)
 
+        postDao = PostDao()
+
         postButton.setOnClickListener {
             val input = postInput.text.toString().trim()
             if (input.isNotEmpty()) {
